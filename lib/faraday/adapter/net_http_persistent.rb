@@ -130,6 +130,7 @@ module Faraday
       def init_options
         options = {name: "Faraday"}
         options[:pool_size] = @connection_options[:pool_size] if @connection_options.key?(:pool_size)
+        options[:pool_timeout] = @connection_options[:pool_timeout] if @connection_options.key?(:pool_timeout)
         options
       end
 
